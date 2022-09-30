@@ -1,2 +1,24 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача.
+// Написать программу, которая из имеющегося массива строк, формирует массив
+// из строк, длина которых меньше либо равна 3 символам. Первоначальный массив
+// можно ввести с клавиатуры, либо задать на старте выполнения алгоритма.
+// При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
+// Пример:
+// ["hello", "2", "world" ,":-)"] -> ["2, ":-)"]  
+// ["1234", "1567", "-2", "computer science"] -> ["-2"]
+
+// Инициализация массива строк
+System.Console.WriteLine("Старый массив: ");
+string[] daysOfWeek = { "Sun", "Mond", "Tuersd",
+      "Wed", "Thi", "Fr", "Satu" };
+
+// Вывод массива строк в цикле
+for (int i = 0; i < daysOfWeek.Length; i++)
+    Console.Write($"{daysOfWeek[i]}  ");
+System.Console.WriteLine();
+
+// Вывод нового массива строк в цикле значения индексов котрого, меньше либо равна 3 символам.
+System.Console.WriteLine("Новый массив: ");
+for (int i = 0; i < daysOfWeek.Length; i++)
+    if (daysOfWeek[i].Length <= 3)
+        System.Console.Write($"{daysOfWeek[i]}  ");
